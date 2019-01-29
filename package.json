@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
-    "start": "node index.js",
+    "start": "nnode index.js",
+    "client": "cd client && ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

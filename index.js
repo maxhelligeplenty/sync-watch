@@ -19,43 +19,43 @@ const clientDir = __dirname + '/client/dist/client';
 
 app.use(express.static(clientDir));
 
-app.get('*', function (req, res) {
+app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname));
 });
 
 // ROUTING //
 
-app.get('/', function (req, res, next) {
+app.get('/', (req, res, next) => {
     res.sendFile('index.html', {
         root: clientDir
     });
 });
 
-app.get('/start', function (req, res, next) {
+app.get('/start', (req, res, next) => {
     res.sendFile('index.html', {
         root: clientDir
     });
 });
 
-app.get('/room/:id', function (req, res, next) {
+app.get('/room/:id', (req, res, next) => {
     res.sendFile('index.html', {
         root: clientDir
     });
 });
 
-app.get('/impressum', function (req, res, next) {
+app.get('/impressum', (req, res, next) => {
     res.sendFile('index.html', {
         root: clientDir
     });
 });
 
-app.get('/datenschutz', function (req, res, next) {
+app.get('/datenschutz', (req, res, next) => {
     res.sendFile('index.html', {
         root: clientDir
     });
 });
 
-app.get('/beta', function (req, res, next) {
+app.get('/beta', (req, res, next) => {
     res.sendFile('index.html', {
         root: clientDir
     });
@@ -63,6 +63,6 @@ app.get('/beta', function (req, res, next) {
 
 server = http.createServer(app);
 
-server.listen(port, function () {
-    console.log('Running client server on port 4200');
+server.listen(port, () => {
+    console.log("App is running on port " + port);
 });

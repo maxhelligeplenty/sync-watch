@@ -15,10 +15,50 @@ const app = express();
 
 const port = process.env.PORT || 4200;
 
-app.use(express.static(__dirname + '/client/dist/client'));
+const clientDir = __dirname + '/client/dist/client';
+
+app.use(express.static(clientDir));
 
 app.get('*', function (req, res) {
     res.sendFile(path.join(__dirname));
+});
+
+// ROUTING //
+
+app.get('/', function (req, res, next) {
+    res.sendFile('index.html', {
+        root: clientDir
+    });
+});
+
+app.get('/start', function (req, res, next) {
+    res.sendFile('index.html', {
+        root: clientDir
+    });
+});
+
+app.get('/room/:id', function (req, res, next) {
+    res.sendFile('index.html', {
+        root: clientDir
+    });
+});
+
+app.get('/impressum', function (req, res, next) {
+    res.sendFile('index.html', {
+        root: clientDir
+    });
+});
+
+app.get('/datenschutz', function (req, res, next) {
+    res.sendFile('index.html', {
+        root: clientDir
+    });
+});
+
+app.get('/beta', function (req, res, next) {
+    res.sendFile('index.html', {
+        root: clientDir
+    });
 });
 
 server = http.createServer(app);

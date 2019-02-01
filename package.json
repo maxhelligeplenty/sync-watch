@@ -1,6 +1,7 @@
 {
   "name": "sync-watch",
   "version": "0.0.1",
+  "main": "index.js",
   "scripts": {
     "ng": "ng",
     "start": "node index.js",
@@ -8,11 +9,18 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "grunt sass:production && ng build --aot -prod"
+  },
+  "engines": {
+    "node": "~10.4.1",
+    "npm": "~6.1.0"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^7.1.4",
+    "@angular/cli": "~7.1.4",
+    "@angular/compiler-cli": "~7.1.0",
     "@angular/common": "~7.1.0",
     "@angular/compiler": "~7.1.0",
     "@angular/core": "~7.1.0",
@@ -35,8 +43,6 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.11.0",
-    "@angular/cli": "~7.1.4",
-    "@angular/compiler-cli": "~7.1.0",
     "@angular/language-service": "~7.1.0",
     "@types/google.analytics": "0.0.39",
     "@types/jasmine": "~2.8.8",

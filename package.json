@@ -69,6 +69,12 @@
     "express": "^4.16.4",
     "nodemailer": "^5.1.1",
     "pug": "^2.0.3",
-    "socket.io": "~2.0.3"
+    "socket.io": "~2.0.3",
+    "copy-to-clipboard": "^3.0.8",
+    "font-awesome": "^4.7.0",
+    "ngx-youtube-player": "^6.0.0",
+    "random-username-generator": "^1.0.4",
+    "bootstrap": "^4.2.1",
+    "angular2-cookie-law": "^6.2.0"
   }
 }
